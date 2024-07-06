@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Define a route and its handler
 @app.route('/')
 def hello():
-    return 'Hello, World!'
+    return 'Hello, World! Welcome to GCP CI/CD with Cloud Build'
 
 # Sample data - Replace this with a database in a real application
 users = [
