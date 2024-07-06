@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'asia-south1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA']
+  args: ['push', 'asia-south1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA']
 
 # - name: 'asia-south1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA'
 #   entrypoint: 'bash'
@@ -19,12 +19,12 @@ steps:
    - 'deploy'
    - 'py-bq-load'
    - '--image'
-   - 'us-central1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA'
+   - 'asia-south1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA'
    - '--region'
-   - 'us-central1'
+   - 'asia-south1'
    - '--allow-unauthenticated'
 images:
-- 'us-central1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA'
+- 'asia-south1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
