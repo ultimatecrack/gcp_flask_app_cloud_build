@@ -17,7 +17,7 @@ steps:
   args:
    - 'run'
    - 'deploy'
-   - 'py-bq-load'
+   - 'flask-cloud-build-demo-app'
    - '--image'
    - 'asia-south1-docker.pkg.dev/mlop-gcp/python-app-repository/mlops-demo-app-1:$COMMIT_SHA'
    - '--region'
