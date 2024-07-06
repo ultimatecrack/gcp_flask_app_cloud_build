@@ -1,6 +1,5 @@
 """
 CI/CD pipeline is created for this application using cloud build to deploy on GCP cloud run
-check
 """
 import os
 from flask import Flask, jsonify, request, abort
